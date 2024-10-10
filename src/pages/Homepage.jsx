@@ -5,7 +5,7 @@ const Homepage = function() {
     const [text, setText] = useState('Здарова');
 
     function fetchToBack() {
-        fetch(`http://localhost:9090/api/text/random`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/text/random`, {
             credentials: 'include'
         })
             .then(response => response.json())
